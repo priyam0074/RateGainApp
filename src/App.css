@@ -36,3 +36,19 @@
     transform: rotate(360deg);
   }
 }
+
+.page-header {
+  background-color: #054F7C;
+  padding: 20px;
+  color: white;
+  font-size: 30px;
+  flex: 1 100%;
+  margin-top: 0;
+  text-align: center;
+}
+.row {
+  padding: 20px;
+    display: grid;
+    background: white;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
