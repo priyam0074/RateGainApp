@@ -7,9 +7,6 @@ export const useFetch = ({ url, init, processData }) => {
   // Turn objects into strings for useCallback & useEffect dependencies
   const [stringifiedUrl, stringifiedInit] = [JSON.stringify(url), JSON.stringify(init)];
 
-  // If no processing function is passed just return the data
-  // The callback hook ensures that the function is only created once
-  // and hence the effect hook below doesn't start an infinite loop
   const processJson = useCallback(processData || ((jsonBody) => jsonBody), []);
 
   useEffect(() => {
